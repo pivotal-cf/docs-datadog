@@ -1,15 +1,26 @@
 ---
-title: Using YOUR-PRODUCT-NAME
+title: Using Datadog Nozzle for PCF
 owner: Partners
 ---
 
-This topic describes how to use YOUR-PRODUCT-NAME.
+This topic describes how to use Datadog Nozzle for PCF.
 
-##<a id='using'></a> Using YOUR-PRODUCT-NAME
+##<a id='using'></a> Using Datadog Nozzle for PCF
 
-**This topic should include any instructions for how to use the service or dashboard created by the tile. 
-Give procedures for how to perform the different functions offered by your product and provide screenshots where necessary.** 
+### View Metrics and Dashboards
 
-**You can also use this section to include information about Architecture and Troubleshooting for known errors. 
-If you include a Troubleshooting section, follow the Symptom/Explanation format used in the 
-[Okta Troubleshooting](http://docs.pivotal.io/p-identity/okta/troubleshooting.html) topic**.
+1. Review the <a href="https://app.datadoghq.com/screen/integration/cloudfoundry">Cloud Foundry Overview</a> Dashboard in Datadog.
+
+<%= image_tag("images/cloud-foundry-dashboard.png") %>
+
+1. Explore individual metrics via the <a href="https://app.datadoghq.com/metric/explorer">Metrics explorer</a> page in Datadog, search for metrics beginning cloudfoundry.nozzle:
+
+<%= image_tag("images/cf-metrics.png") %>
+
+### Create Alerts
+
+1. <a href="https://docs.datadoghq.com/guides/monitors/">Create alerts</a> for your Cloud Foundry metrics.
+
+### Troubleshooting
+
+See Datadog's <a href="https://docs.datadoghq.com/integrations/cloud_foundry/">official documentation</a> for troubleshooting steps.
