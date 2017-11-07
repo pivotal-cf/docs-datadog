@@ -2,16 +2,6 @@
 title: Datadog Nozzle for PCF
 owner: Partners
 ---
-<style>
-    .note.warning {
-        background-color: #fdd;
-        border-color: #fbb
-    }
-
-    .note.warning:before {
-        color: #f99;
-     }
-</style>
 
 This documentation describes the Datadog Nozzle for Pivotal Cloud Foundry (PCF). The Datadog Nozzle
 enables PCF users and administrators to monitor the health and performance of their PCF clusters.
@@ -22,14 +12,19 @@ For comprehensive monitoring you will want to also install the [Datadog Agent](h
 
 Datadog Nozzle for PCF is a Cloud Foundry component which forwards metrics from the Loggregator Firehose to the Datadog monitoring platform. Any Cloud Foundry deployment can send metrics and events to Datadog. The data helps you track the health and availability of all nodes in the deployment, monitor the jobs they run, collect metrics from the Loggregator Firehose, and more. 
 
-Datadog Nozzle for PCF includes includes the following key features:
+Datadog Nozzle for PCF includes the following key features:
 
-* Visualization all cluster level operational metrics and KPIs
+* Visualization of all cluster level operational metrics and KPIs
 * Alerting on PCF cluster and component health
 * Monitoring of jobs
-* Tracking and reporting on BOSH events
+* Tracking and reporting of BOSH events
 
-Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications. Datadog provides full-stack observability by combining infrastructure metrics and events with application performance metrics and end-to-end tracing. With flexible graphs and dashboards, sophisticated alerting, and machine learning functionality for anomaly detection and outlier detection, the platform provides actionable insight into dynamic, modern environments. Datadog features 200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
+Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications.
+Datadog provides full-stack observability by combining infrastructure metrics and events with 
+application performance metrics and end-to-end tracing. With flexible graphs and dashboards,
+sophisticated alerting, and machine learning functionality for anomaly and outlier detection,
+the platform provides actionable insight into dynamic, modern environments. Datadog features 
+200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
 
 Additional details about the Datadog integration with Cloud Foundry are avaialble via [Datadog's documentation](https://docs.datadoghq.com/integrations/cloud_foundry/).
 
@@ -46,7 +41,7 @@ The following table provides version and version-support information about the D
     </tr>
     <tr>
         <td>Release date</td>
-        <td>October 31, 2017</td>
+        <td>November 15, 2017</td>
     </tr>
     <tr>
         <td>Software component version</td>
@@ -68,7 +63,7 @@ The following table provides version and version-support information about the D
 
 ## <a id="reqs"></a>Requirements
 
-Datadog Nozzle for Cloud Foundry has the following requirements:
+Datadog Nozzle for PCF has the following requirements:
 
 + You must have or create a [Datadog account](https://app.datadoghq.com/signup) before configuring the tile.
 
