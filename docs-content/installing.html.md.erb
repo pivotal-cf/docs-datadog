@@ -20,6 +20,15 @@ This adds the tile to your staging area.
 1. In the **Datadog Config** section enter your [Datadog API key](https://app.datadoghq.com/account/settings#api). Leave the Metrics Prefix and Datadog API URL as is unless directed otherwise by [Datadog Support](https://docs.datadoghq.com/help/).
 
 1. Create a UAA client account for Datadog using the [UAA CLI](https://docs.pivotal.io/pivotalcf/uaa/uaa-user-management.html). The Nozzle will require access to the Loggregator Firehose.
+  <pre class="terminal">
+  $ uaac client add datadog-firehose-nozzle \
+        --name datadog-firehose-nozzle \
+        --scope doppler.firehose,cloud_controller.admin_read_only,oauth.login \
+        --authorities doppler.firehose,cloud_controller.admin_read_only,openid,oauth.approvals \
+        --authorized_grant_types client_credentials,refresh_token \
+        --access_token_validity 1209600 \
+        -s $CLIENT_SECRET
+  </pre>
 
 1. In the **Cloud Foundry Settings** section, specify a UAA Client and UAA Secret from the previous step.
 
