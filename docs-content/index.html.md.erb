@@ -1,18 +1,23 @@
 ---
-title: Datadog Nozzle for PCF
+title: Datadog Cluster Monitoring for PCF
 owner: Partners
 ---
 
-This documentation describes the Datadog Nozzle for Pivotal Cloud Foundry (PCF). The Datadog Nozzle
-enables PCF users and administrators to monitor the health and performance of their PCF clusters.
+This documentation describes Datadog Cluster Monitoring for Pivotal Cloud Foundry (PCF). The Datadog Cluster Monitoring combines our Datadog Nozzle with the Datadog Agent, and enables PCF users and administrators to monitor the health and performance of their PCF clusters.
 
-For comprehensive monitoring, you can also install the [Datadog Agent](https://docs.datadoghq.com/integrations/cloud_foundry/#install-the-datadog-agent-bosh-release) and [BOSH Health Monitor](https://docs.datadoghq.com/integrations/cloud_foundry/#configure-the-datadog-plugin-for-bosh-health-monitor).
+For comprehensive monitoring, you can also install the [BOSH Health Monitor](https://docs.datadoghq.com/integrations/cloud_foundry/#configure-the-datadog-plugin-for-bosh-health-monitor).
 
 ## <a id='overview'></a>Overview
 
-Datadog Nozzle for PCF is a Cloud Foundry component which forwards metrics from the Loggregator Firehose to the Datadog monitoring platform. Any Cloud Foundry deployment can send metrics and events to Datadog. The data helps you track the health and availability of all nodes in the deployment, monitor the jobs they run, collect metrics from the Loggregator Firehose, and more.
+Datadog Cluster Monitoring for PCF is made up of two components:
+* The Datadog Firehose Nozzle
+* The Datadog Agent
 
-Datadog Nozzle for PCF includes the following key features:
+The Datadog Nozzle is a Cloud Foundry component which forwards metrics from the Loggregator Firehose to the Datadog monitoring platform. Any Cloud Foundry deployment can send metrics and events to Datadog. The data helps you track the health and availability of all nodes in the deployment, monitor the jobs they run, collect metrics from the Loggregator Firehose, and more.
+
+The Datadog Agent is small daemon that is installed via BOSH addon to run on every host and collect infrastructure metrics from each host.
+
+Datadog Cluster Monitoring for PCF includes the following key features:
 
 * Visualization of all cluster level operational metrics and KPIs
 * Alerting on PCF cluster and component health
@@ -30,24 +35,24 @@ Additional details about the Datadog integration with Cloud Foundry are avaialbl
 
 ## <a id="snapshot"></a>Product Snapshot
 
-<p class='note'><strong>Note:</strong> As of PCF v2.0, Elastic Runtime is renamed Pivotal Application Service (PAS).</p> 
+<p class='note'><strong>Note:</strong> As of PCF v2.0, Elastic Runtime is renamed Pivotal Application Service (PAS).</p>
 
-The following table provides version and version-support information about the Datadog Nozzle for PCF.
+The following table provides version and version-support information about the Datadog Cluster Monitoring for PCF.
 
 <table class="nice">
     <th>Element</th>
     <th>Details</th>
     <tr>
         <td>Version</td>
-        <td>v1.1.0</td>
+        <td>v2.0.0</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>January 23, 2018</td>
+        <td>February 22, 2018</td>
     </tr>
     <tr>
         <td>Software component version</td>
-        <td>v1.1.0</td>
+        <td>v2.2.0</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
@@ -66,7 +71,7 @@ The following table provides version and version-support information about the D
 
 ## <a id="reqs"></a>Requirements
 
-Datadog Nozzle for PCF has the following requirements:
+Datadog Cluster Monitoring for PCF has the following requirements:
 
 + You must have or create a [Datadog account](https://app.datadoghq.com/signup) before configuring the tile.
 
@@ -81,7 +86,7 @@ Please provide any bugs, feature requests, or questions to the
 
 ## <a id='license'></a>License
 
-Datadog Nozzle for PCF is released under the Apache License 2.0.
+Datadog Cluster Monitoring for PCF is released under the Apache License 2.0.
 
-To use Datadog Nozzle for PCF, you need a [Datadog API](https://app.datadoghq.com/account/settings#api) key and account.
+To use Datadog Cluster Monitoring for PCF, you need a [Datadog API](https://app.datadoghq.com/account/settings#api) key and account.
 If you do not have a Datadog account, [sign up here](https://app.datadoghq.com/account/login?next=%2F).
