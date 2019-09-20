@@ -1,21 +1,21 @@
 ---
-title: Installing and Configuring Datadog Cluster Monitoring for PCF
+title: Installing and Configuring Datadog Cluster Monitoring for Pivotal Platform
 owner: Partners
 ---
 
-This topic describes how to install and configure Datadog Nozzle for Pivotal Cloud Foundry (PCF).
+This topic describes how to install and configure Datadog Nozzle for Pivotal Platform.
 
 1. Confirm that you have installed the [BOSH Health Monitor](https://docs.datadoghq.com/integrations/cloud_foundry/#configure-the-datadog-plugin-for-bosh-health-monitor).
 
-1. Download the product file for the **Datadog Cluster Monitoring for PCF** from Pivotal Network.
+1. Download the product file for the **Datadog Cluster Monitoring for Pivotal Platform** from Pivotal Network.
 
 1. Navigate to the Ops Manager Installation Dashboard.
 
 1. Click **Import a Product** to upload the product file.
 
-1. Under the **Import a Product** button, click **+** next to the version number of **Datadog Cluster Monitoring for PCF**. This adds the tile to your staging area.
+1. Under the **Import a Product** button, click **+** next to the version number of **Datadog Cluster Monitoring for Pivotal Platform**. This adds the tile to your staging area.
 
-1. Click the newly added **Datadog Cluster Monitoring for PCF** title.
+1. Click the newly added **Datadog Cluster Monitoring for Pivotal Platform** title.
 
 1. In the **Datadog Config** section enter your [Datadog API key](https://app.datadoghq.com/account/settings#api). Leave Datadog API URL as is unless directed otherwise by [Datadog Support](https://docs.datadoghq.com/help/).
 
@@ -37,4 +37,4 @@ This topic describes how to install and configure Datadog Nozzle for Pivotal Clo
 1. The **Datadog Firehose Nozzle Config** section contains optional config for the Nozzle, the **Datadog Agent Config** section contains optional configurations for the Agent. You do not need to configure anything in either section.
 <p class='note'><strong>Note:</strong> If you are using a single Datadog account to monitor multiple foundations, you must check the <strong>Use UUID Hostname</strong> checkbox.</p>
 
-1. Return to the Ops Manager Installation Dashboard and click **Apply Changes** to install Datadog Cluster Monitoring for PCF tile.
+1. Return to the Ops Manager Installation Dashboard and click **Apply Changes** to install Datadog Cluster Monitoring for Pivotal Platform tile.
