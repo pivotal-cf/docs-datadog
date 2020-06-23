@@ -9,14 +9,17 @@ For comprehensive monitoring, you can also install the [BOSH Health Monitor](htt
 
 ## <a id='overview'></a>Overview
 
-Datadog Cluster Monitoring for VMware Tanzu is made up of two components:
+Datadog Cluster Monitoring for VMware Tanzu is made up of three components:
 
 * The Datadog Firehose Nozzle
 * The Datadog Agent
+* The Datadog Cluster Agent
 
 The Datadog Nozzle is a Cloud Foundry component which forwards metrics from the Loggregator Firehose to the Datadog monitoring platform. Any Cloud Foundry deployment can send metrics and events to Datadog. The data helps you track the health and availability of all nodes in the deployment, monitor the jobs they run, collect metrics from the Loggregator Firehose, and more.
 
 The Datadog Agent is small daemon that is installed via BOSH addon to run on every host and collect infrastructure metrics from each host.
+
+The Datadog Cluster Agent is a small daemon that is deployed on its own VM, and is used to resolve integration configurations with Autodiscovery and schedule them on the Datadog Agent running on every host.
 
 Datadog Cluster Monitoring for VMware Tanzu includes the following key features:
 
@@ -24,6 +27,7 @@ Datadog Cluster Monitoring for VMware Tanzu includes the following key features:
 * Alerting on VMware Tanzu cluster and component health
 * Monitoring of jobs
 * Tracking and reporting of BOSH events
+* Autodiscovery of integrations
 
 Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications.
 Datadog provides full-stack observability by combining infrastructure metrics and events with
@@ -32,7 +36,7 @@ sophisticated alerting, and machine learning functionality for anomaly and outli
 the platform provides actionable insight into dynamic, modern environments. Datadog features
 200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
 
-Additional details about the Datadog integration with Cloud Foundry are avaialble via [Datadog's documentation](https://docs.datadoghq.com/integrations/cloud_foundry/).
+Additional details about the Datadog integration with Cloud Foundry are available via [Datadog's documentation](https://docs.datadoghq.com/integrations/cloud_foundry/).
 
 ## <a id="snapshot"></a>Product Snapshot
 
@@ -43,15 +47,15 @@ The following table provides version and version-support information about the D
     <th>Details</th>
     <tr>
         <td>Version</td>
-        <td>3.3.0</td>
+        <td>4.0.0</td>
     </tr>
     <tr>
         <td>Release date</td>
-        <td>May 13, 2020</td>
+        <td>June 23, 2020</td>
     </tr>
     <tr>
         <td>Software component version</td>
-        <td>3.3.0</td>
+        <td>4.0.0</td>
     </tr>
     <tr>
         <td>Compatible Ops Manager version(s)</td>
