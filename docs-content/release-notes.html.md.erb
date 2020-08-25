@@ -10,7 +10,13 @@ These are release notes for Datadog Cluster Monitoring for VMware Tanzu.
 **Release Date:** June 23, 2020
 
 * [Added] Add Datadog Cluster Agent Bosh release to the tile. See [#19](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/19).
-  **Note:** When enabled, the Datadog Cluster Agent is deployed on an additional VM created during the tile deployment and may impact the billing from the cloud provider running your VMware Tanzu infrastructure. This additional VM can be configured in the `Resource Config` tab of the tile.
+<p class='note'><strong>Note:</strong> When enabled, the Datadog Cluster Agent is deployed on an additional VM created during the tile deployment and may impact the billing from the cloud provider running your VMware Tanzu infrastructure. This additional VM can be configured in the `Resource Config` tab of the tile.
+<p class='note'><strong>Note:</strong> If you chose to enable the Datadog Cluster Agent to use its features, and are performing a first installation of the Datadog Cluster Monitoring Tile or an upgrade from a version earlier than 4.0.0 to version 4.x, you have to do the first deployment in two steps:
+  <ol>
+    <li>Do a selective deployment with only the Datadog Cluster Monitoring Tile</li>
+    <li>Do a second selective deployment with everything else</li>
+  </ol>
+</p>
 * [Changed] Disable NPM with system probe by default. See [#20](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/20).
 
 This tile includes the following packages:
