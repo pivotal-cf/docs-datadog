@@ -32,9 +32,17 @@ This topic describes how to install and configure Datadog Nozzle for VMware Tanz
 
 1. In the **Cloud Foundry Settings** section, specify a UAA Client and UAA Secret from the previous step.
 
-1. If Ops Manager requires you to upload a stemcell, [download a stemcell](https://network.pivotal.io/products/stemcells#/releases/5881) from the 3263 line. Upload it to Ops Manager with the **Import Stemcell** button.
+1. If Ops Manager requires you to upload a stemcell, [download a stemcell](https://network.pivotal.io/products/stemcells-ubuntu-xenial/#/releases/721399) from the 621 line. Upload it to Ops Manager with the **Import Stemcell** button.
 
 1. The **Datadog Firehose Nozzle Config** section contains optional config for the Nozzle, the **Datadog Agent Config** section contains optional configurations for the Agent. You do not need to configure anything in either section.
 <p class='note'><strong>Note:</strong> If you are using a single Datadog account to monitor multiple foundations, you must check the <strong>Use UUID Hostname</strong> checkbox.</p>
 
+1. The **Datadog Cluster Agent Settings** section contains configuration for the [Datadog Cluster Agent](https://github.com/DataDog/datadog-cluster-agent-boshrelease#datadog-cluster-agent-bosh-release) that provides autodiscovery of integrations and application containers features.
+
 1. Return to the Ops Manager Installation Dashboard and click **Apply Changes** to install Datadog Cluster Monitoring for VMware Tanzu tile.
+<p class='note'><strong>Note:</strong>: If you chose to enable the Datadog Cluster Agent to use its features, and are performing a first installation of the Datadog Cluster Monitoring Tile or an upgrade from a version earlier than 4.0.0 to version 4.x, you have to do the first deployment in two steps:
+  <ol>
+    <li>Do a selective deployment with only the Datadog Cluster Monitoring Tile</li>
+    <li>Do a second selective deployment with everything else</li>
+  </ol>
+</p>
