@@ -5,6 +5,23 @@ owner: Partners
 
 These are release notes for Datadog Cluster Monitoring for VMware Tanzu.
 
+##<a id="ver"></a> v4.6.0
+
+**Release Date:** April 21, 2021
+
+* [Added] Add `no_proxy_nonexact_match` configuration option. See [#47](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/47).
+* [Added] Add inputs to configure custom URLs for process, APM and logs. See [#46](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/46).
+* [Added] Add option to send application environment variables as custom container tags. See [#45](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/45).
+* [Added] Add option to poll Cloud Foundry API for more advanced container tagging. See [#42](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/42).
+* [Added] Add option to collect containers only with the Process Agent. See [#41](https://github.com/DataDog/datadog-cluster-monitoring-pivotal-tile/pull/41).
+* [Added] Bump Datadog Agent Bosh Release to version 4.5.0. See [here](https://github.com/DataDog/datadog-agent-boshrelease/releases/tag/4.5.0) for details.
+* [Added] Bump Datadog Cluster Agent Bosh Release to version 1.6.0. See [here](https://github.com/DataDog/datadog-cluster-agent-boshrelease/releases/tag/1.6.0) for details.
+
+This tile includes the following packages:
+  * [Firehose Nozzle 80](https://github.com/DataDog/datadog-firehose-nozzle-release/releases/tag/80)
+  * [Datadog Agent Bosh Release 4.5.0](https://github.com/DataDog/datadog-agent-boshrelease/releases/tag/4.5.0)
+  * [Datadog Cluster Agent Bosh Release 1.6.0](https://github.com/DataDog/datadog-cluster-agent-boshrelease/releases/tag/1.6.0)
+
 ##<a id="ver"></a> v4.5.0
 
 **Release Date:** April 6, 2021
