@@ -3,9 +3,8 @@ title: Datadog Cluster Monitoring for VMware Tanzu
 owner: Partners
 ---
 
-This documentation describes Datadog Cluster Monitoring for VMware Tanzu. The Datadog Cluster Monitoring combines our Datadog Nozzle with the Datadog Agent, and enables VMware Tanzu users and administrators to monitor the health and performance of their VMware Tanzu clusters.
+Datadog Cluster Monitoring for VMware Tanzu combines the Datadog Nozzle with the Datadog Agent, and enables VMware Tanzu users and administrators to monitor the health and performance of their VMware Tanzu clusters.
 
-For comprehensive monitoring, you can also install the [BOSH Health Monitor](https://docs.datadoghq.com/integrations/cloud_foundry/#configure-the-datadog-plugin-for-bosh-health-monitor).
 
 ## <a id='overview'></a>Overview
 
@@ -17,13 +16,13 @@ Datadog Cluster Monitoring for VMware Tanzu is made up of three components:
 
 The Datadog Nozzle is a Cloud Foundry component which forwards metrics from the Loggregator Firehose to the Datadog monitoring platform. Any Cloud Foundry deployment can send metrics and events to Datadog. The data helps you track the health and availability of all nodes in the deployment, monitor the jobs they run, collect metrics from the Loggregator Firehose, and more.
 
-The Datadog Agent is small daemon that is installed via BOSH addon to run on every host and collect infrastructure metrics from each host.
+The Datadog Agent is software that runs on your hosts to collect infrastructure metrics, and is installed through the BOSH addon.
 
-The Datadog Cluster Agent is a small daemon that is deployed on its own VM, and is used to resolve integration configurations with Autodiscovery and schedule them on the Datadog Agent running on every host.
+The Datadog Cluster Agent is software that is deployed on its own VM, and is used to resolve integration configurations with Autodiscovery and schedule them on the Datadog Agent.
 
 Datadog Cluster Monitoring for VMware Tanzu includes the following key features:
 
-* Visualization of all cluster level operational metrics and KPIs
+* Visualization of all cluster-level operational metrics and KPIs
 * Alerting on VMware Tanzu cluster and component health
 * Monitoring of jobs
 * Tracking and reporting of BOSH events
@@ -31,16 +30,13 @@ Datadog Cluster Monitoring for VMware Tanzu includes the following key features:
 
 Datadog is a monitoring and analytics platform for cloud-scale infrastructure and applications.
 Datadog provides full-stack observability by combining infrastructure metrics and events with
-application performance metrics and end-to-end tracing. With flexible graphs and dashboards,
-sophisticated alerting, and machine learning functionality for anomaly and outlier detection,
-the platform provides actionable insight into dynamic, modern environments. Datadog features
-200+ vendor-supported integrations, with simple configuration and built-in template dashboards.
+application performance metrics and end-to-end tracing.
 
-Additional details about the Datadog integration with Cloud Foundry are available via [Datadog's documentation](https://docs.datadoghq.com/integrations/cloud_foundry/).
+Additional details about the Datadog integration with Pivotal Platform are available on the [Pivotal Platform documentation](https://docs.datadoghq.com/integrations/pivotal_platform/).
 
 ## <a id="snapshot"></a>Product Snapshot
 
-The following table provides version and version-support information about the Datadog Cluster Monitoring for VMware Tanzu.
+The following table provides version and version support information about Datadog Cluster Monitoring for VMware Tanzu.
 
 <table class="nice">
     <th>Element</th>
@@ -58,12 +54,12 @@ The following table provides version and version-support information about the D
         <td>5.2.1</td>
     </tr>
     <tr>
-        <td>Compatible Ops Manager version(s)</td>
-        <td>v2.7.x, v2.8.x, v2.9.x and v2.10.x</td>
+        <td>Compatible Ops Manager versions</td>
+        <td>v2.7.x, v2.8.x, v2.9.x, and v2.10.x</td>
     </tr>
     <tr>
-        <td>Compatible Tanzu Application Service version(s)</td>
-        <td>v2.7.x, v2.8.x, v2.9.x, v2.10.x and v2.11.x</td>
+        <td>Compatible Tanzu Application Service versions</td>
+        <td>v2.7.x, v2.8.x, v2.9.x, v2.10.x, and v2.11.x</td>
     </tr>
     <tr>
         <td>BOSH stemcell version</td>
@@ -83,16 +79,13 @@ Datadog Cluster Monitoring for VMware Tanzu has the following requirements:
 
 + You must generate a [Datadog API key](https://app.datadoghq.com/account/settings#api).
 
-+ You must install the Datadog Agent BOSH release and Datadog plugin for BOSH Health Monitor as per Datadog's [Cloud Foundry documentation](https://docs.datadoghq.com/integrations/cloud_foundry/).
++ You must install the Datadog Agent BOSH release as outlined in Datadog's [Pivotal Platform documentation](https://docs.datadoghq.com/integrations/pivotal_platform/#monitor-your-pivotal-platform-cluster).
 
 ## <a id="feedback"></a>Feedback
 
-Please provide any bugs, feature requests, or questions to the
+Provide any bugs, feature requests, or questions to the
 [VMware Tanzu Feedback](mailto:pivotal-cf-feedback@pivotal.io) list or send an email to support@datadoghq.com.
 
 ## <a id='license'></a>License
 
 Datadog Cluster Monitoring for VMware Tanzu is released under the Apache License 2.0.
-
-To use Datadog Cluster Monitoring for VMware Tanzu, you need a [Datadog API](https://app.datadoghq.com/account/settings#api) key and account.
-If you do not have a Datadog account, [sign up here](https://app.datadoghq.com/account/login?next=%2F).
