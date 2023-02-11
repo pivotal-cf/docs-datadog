@@ -19,7 +19,7 @@ This topic describes how to install and configure Datadog Cluster Monitoring for
 
 7. Enter your [Datadog API key](https://app.datadoghq.com/account/settings#api) in the **Datadog Config** section. Leave the Datadog API URL unchanged, unless directed otherwise by [Datadog Support](https://docs.datadoghq.com/help/).
 
-8. Create a UAA client account for Datadog using the [UAA CLI](https://docs.pivotal.io/pivotalcf/uaa/uaa-user-management.html). The Nozzle requires access to the Loggregator Firehose.
+8. Create a UAA client account for Datadog using the [UAA CLI](https://docs.pivotal.io/application-service/uaa/uaa-user-management.html). The Nozzle requires access to the Loggregator Firehose.
   <pre class="terminal">
   $ uaac client add datadog-firehose-nozzle \
         --name datadog-firehose-nozzle \
